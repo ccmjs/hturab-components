@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <style>
+    input[type=text], select {
+        padding: 10px 20px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        box-sizing: content-box;
+    }
 
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a000;
+    }
+    #h1 {
+        width: 50px;
+        height: 5px;
+        background-color: black;
+        color: black;
+    }
+    #h2{
+
+
+        padding-left: 15%;
+    }
+  </style>
+
+  <body>
+
+    <select id="select_1" name="country" >
+        <option> MUSS </option>
+        <option> SOLL </option>
+        <option> KANN </option>
+     </select>
+
+        <input type="text" id="word_2" name="lastname" placeholder="<Objekt>">
+        <button onclick="getDisplay()"> <input type="submit" value="Submit"> </button>
+
+
+
+        <div id="natija"> </div>
+
+    <script type="text/javascript">
+
+
+
+
+        function getDisplay(){
+         let use1 =
+            document.getElementById("select_1").value+" "+
+            document.getElementById("word_2").value;
+            let text = document.createTextNode(use1);
+            let li = document.createElement("li");
+            li.appendChild(text);
+
+            document.getElementById("natija").appendChild(li);
+            document.getElementById("word_1").value = "";
+            document.getElementById("word_2").value = "";
+        }
+
+    </script>
+  </body>
+</html>
